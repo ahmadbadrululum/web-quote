@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // 1 USER BISA NULIS BANYAK QUOTES
+    public function quotes()
+    {
+        // milik dari
+        return $this->belongsTo('App\Models\Quote');
+    }
 }
